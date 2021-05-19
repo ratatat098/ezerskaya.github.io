@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="eng">
+<head>
+    <title>Nasinka makes a website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="wrapper"><h1>About me</h1>
+            <div class="lang-link">
+                <a class="active-link" href="#">eng</a>
+                <a href="index-ru.html">ru</a>
+                <a href="index-kor.html">한</a>
+            </div>
+        </div>
+
+    </div>
+</header>
+<section class="preface">
+    <div class="container">
+        <div class="wrapper">
+            <div>
+                <img src="img/me.png" height="300" width="400"/>
+                <div class="social-links">
+                    <a href="https://github.com/ratatat098" target="_blank">Github</a>
+                    <a href="https://www.behance.net/anastasiae1" target="_blank">Behance</a>
+                    <a href="https://t.me/Ezerska" target="_blank">Telegram</a>
+                </div>
+            </div>
+
+            <div class="content">
+                <p>Hello, my name is <b>Nastya</b><br>
+                    Designer with abilities in <b>UX/UI</b>, <b>Design
+                        Thinking</b>, and <b>Reserch </b></p>
+                <p> I want to get involved in the creativity
+                    industry and <b>develop myself</b> on a more
+                    advances level</p>
+                <div class="write-me">
+                    <p>Write me</p>
+                    <div id="cat">
+                        <div id="cat-eye-left" class="cat-eye">
+                            <div class="cat-eyeball"></div>
+                        </div>
+                        <div id="cat-eye-right" class="cat-eye">
+                            <div class="cat-eyeball"></div>
+                        </div>
+                    </div>
+                    <p>PLS</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="skills">
+    <div class="container">
+        <div><h2>Skills</h2>
+            <div class="skills-cards">
+                <div class="card">
+                    <div class="wrapper"><h3 class="card-title">UX/UI</h3>
+                        <div class="prgrms">
+                            <p>Figma
+                                &#10040</p>
+                            <p>Sketch
+
+                                &#10040</p>
+                            <p>Invision</p>
+                        </div>
+                    </div>
+                    <p>During the design courses i learned: </br>
+                        &#129042 Development of design layouts for sites and individual web pages, including responsive
+                        versions</br>
+                        &#129042 Landing page design</br>
+                        &#129042 Creation of design systems UI kit for sites</br>
+                        I stuffed my hand with small orders on platforms: Fiverr and Upwork</p>
+                </div>
+                <div class="card">
+                    <h4 class="card-title">HTML/CSS</h4>
+                    <p>I know the basics of html5, CSS</p>
+                    <p>This page was created by me</p></div>
+                <div class="card">
+                    <h5 class="card-title">Python</h5>
+                    <p>Studied the basics as part of a university course. I continue to study on my own</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="img/star.png" height="100" width="100" class="decor"/>
+    <img src="img/star.png" height="60" width="60" class="decor2"/>
+    <img src="img/star.png" height="80" width="80" class="decor3"/>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+    var el1 = $('#cat-eye-left'), eyeBall1 = el1.find('div');
+    var el2 = $('#cat-eye-right'), eyeBall2 = el2.find('div');
+    el1.show();
+    el2.show();
+    var x1 = el1.offset().left + 37, y1 = el1.offset().top + 25;
+    var r = 10, x, y, x2, y2, isEyeProcessed = false;
+    $('html').mousemove(function (e) {
+        if (!isEyeProcessed) {
+            isEyeProcessed = true;
+            var x2 = e.pageX, y2 = e.pageY;
+            y = ((r * (y2 - y1)) / Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))) + y1;
+            x = (((y - y1) * (x2 - x1)) / (y2 - y1)) + x1;
+            eyeBall1.css({
+                marginTop: (y - y1 + 1) + 'px',
+                marginLeft: (x - x1) + 'px'
+            });
+            eyeBall2.css({
+                marginTop: (y - y1 + 1) + 'px',
+                marginLeft: (x - x1) + 'px'
+            });
+            isEyeProcessed = false;
+        }
+    });
+</script>
+</body>
+</html>
