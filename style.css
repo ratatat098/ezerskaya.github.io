@@ -28,12 +28,6 @@ a {
 }
 
 
-@media (max-width: 778px ) {
-    .container {
-        padding: 0 1rem;
-    }
-}
-
 header {
     padding-top: 2rem;
     font-family: 'Poppins', sans-serif;
@@ -71,6 +65,10 @@ h1::before {
     height: 30px;
     background: #95E488;
     z-index: -1;
+}
+
+.image {
+    max-width: 24rem;
 }
 
 
@@ -136,6 +134,7 @@ h1::before {
 .preface .wrapper {
     align-items: flex-start;
 }
+
 .content {
     display: flex;
     flex-direction: column;
@@ -148,6 +147,7 @@ h1::before {
     line-height: 35px;
     letter-spacing: 0.05em;
 }
+
 .skills {
     font-style: normal;
     font-weight: normal;
@@ -157,26 +157,30 @@ h1::before {
     position: relative;
     padding-bottom: 5rem;
 }
-.decor{
+
+.decor {
     position: absolute;
     z-index: 1;
-    right:20%;
+    right: 20%;
     top: 30vh;
 }
-.decor2{
+
+.decor2 {
     position: absolute;
     z-index: 1;
-    left:20%;
+    left: 20%;
     top: 94vh;
 }
+
 .decor3 {
     position: absolute;
     z-index: 1;
     left: 80%;
     top: 95vh;
 }
+
 h2 {
-    display:inline-block;
+    display: inline-block;
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
@@ -200,20 +204,24 @@ h2::before {
     background: #95E488;
     z-index: -1;
 }
-.skills-cards{
-    display:flex;
+
+.skills-cards {
+    display: flex;
     flex-direction: column;
 }
-.skills-cards .card:nth-child(3){
+
+.skills-cards .card:nth-child(3) {
     align-self: flex-end;
     max-width: 23rem;
     width: 100%;
 }
+
 .skills-cards .card:nth-child(2) {
     align-self: center;
     max-width: 25rem;
     width: 100%
 }
+
 .skills-cards .card:nth-child(1) {
     position: relative;
     align-self: flex-start;
@@ -229,11 +237,13 @@ h2::before {
     margin-bottom: 3rem;
 
 }
-.prgrms{
+
+.prgrms {
     display: flex;
     margin-bottom: 30px;
 }
-.card-title{
+
+.card-title {
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -241,7 +251,8 @@ h2::before {
     letter-spacing: 0.05em;
     margin-bottom: 30px;
 }
-.card p{
+
+.card p {
     font-size: 18px;
 }
 
@@ -322,4 +333,34 @@ h2::before {
 #cat-eye-right {
     top: 0;
     left: 50%;
+}
+
+@media (max-width: 778px ) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .lang-link {
+        margin-top: 3rem;
+    }
+
+    .skills {
+        margin-top: 20rem;
+    }
+
+    .decor,
+    .decor2,
+    .decor3 {
+        opacity: 0.4;
+    }
+
+    .image {
+        max-width: 20rem;
+    }
+
+    .skills-cards .card:nth-child(3),
+    .skills-cards .card:nth-child(2){
+        align-self: flex-start;
+    }
+
 }
